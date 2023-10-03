@@ -923,12 +923,14 @@ details div {
     .mobile-nav-toggle  {
         display: block;
         position: fixed;
+        top: 1rem;
         right: 1rem;
         /*var(--size-400)*/
         z-index: 100;
         cursor: pointer;
-        background: transparent;
-        border: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 100%;
+        border: none;
         padding: 0.5em;
     }
 
