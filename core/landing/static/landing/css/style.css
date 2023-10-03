@@ -110,9 +110,8 @@ p, h1, h2, h3, h4, h5 {
     --padding: 1rem;
 
     width: min(var(--max-width), 100%);
-    min-width: 310px;
-    margin-left: auto;
-    margin-right: auto;
+    min-width: 360px;
+    margin: 0 auto;
 }
 @media (min-width: 30em) {
     .container {
@@ -146,10 +145,11 @@ p, h1, h2, h3, h4, h5 {
 .hero-grid {
     display: grid;
     gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-areas: 
         'one'
         'four';
-    
+
 }
 
 
@@ -266,6 +266,7 @@ p, h1, h2, h3, h4, h5 {
 }
 .companies-layout {
     display: flex;
+    flex-wrap: wrap;
     flex: 1;
     gap: 1em;
     /* grid-template-columns: repeat(5, 1fr); */
