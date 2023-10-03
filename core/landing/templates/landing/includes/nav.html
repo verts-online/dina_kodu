@@ -1,0 +1,20 @@
+{% load static %}
+<div class="nav-wrapper">
+    <a class="logo" href="#hero" alt="logo">
+        <span>Организатор пространства</span>
+        Vedana Kodu
+    </a>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="visually-hidden">Меню</span>
+        <img class="icon-hamburger" src="{% static 'landing/images/svg/menu.svg' %}" alt="Menu-open" aria-hidden="true">
+        <img class="icon-close" src="{% static 'landing/images/svg/close-menu.svg' %}" alt="Menu-close" aria-hidden="true">
+    </button>
+    <nav class="primary-navigation" id="primary-navigation">
+        <ul role="list" class="nav-list">
+            <li><a href="#for-who">Для кого</a></li>
+            <li><a href="#why-us">Почему мы</a></li>
+            <li><a href="#we-can-do">Услуги</a></li>
+        </ul>
+    </nav>
+    <a class="button | display-sm-none display-md-inline-flex" href="#call-us">Связаться</a>
+</div>

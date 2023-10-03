@@ -1,0 +1,174 @@
+{% extends "landing/base.html" %}
+{% load static %}
+{% block content %}
+    <!-- SECTIONS -->
+            <section class="for-who" id="for-who">
+                <h2 class="fs-secondary-heading">Для кого</h2>
+                <div class="grid-cards">
+                    <article class="card">
+                        <img src="{% static 'landing/images/reasons/reason-1.jpeg' %}" alt="Причина1">
+                        <div class="card-context">
+<!--                            <h3 class="fs-500"></h3>-->
+                            <p>У вас слишком много вещей - это давит и портит настроение</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="{% static 'landing/images/reasons/reason-2.jpeg' %}" alt="Причина1">
+                        <div class="card-context">
+<!--                            <h3 class="fs-500"></h3>-->
+                            <p>Вы устали от бесконечной уборки. Хотите порядок НАВСЕГДА</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="{% static 'landing/images/reasons/reason-3.png' %}" alt="Причина1">
+                        <div class="card-context">
+<!--                            <h3 class="fs-500"></h3>-->
+                            <p>Вы хотите эффективнее использовать пространство, но не знаете как
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="{% static 'landing/images/reasons/ssora.jpeg' %}" alt="Причина1">
+                        <div class="card-context">
+<!--                            <h3 class="fs-500">Нервы</h3>-->
+                            <p>Вы ссоритесь с близкими из-за беспорядка. Не отдыхаете в своем доме</p>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+            <section id="why-us">
+                    <h2 class="fs-secondary-heading">Почему мы?</h2>
+                    <div class="even-columns">
+                        <div class="column why-us-context why-us-context-layout">
+                            <div>
+                                <h3>Индивидальный подход</h3>
+                                <p>
+                                    Ориентируемся на ваши пожелания и подстроим системы хранения именно под ваш быт
+                                </p>
+                            </div>
+                        </div>
+                        <div class="column why-us-image why-us-image-layout">
+                            <img src="{% static 'landing/images/individual.jpg' %}" alt="">
+                            <div class="feedback-card feedback-card-center-absolute">
+                                <div>
+                                    <img class="feedback-avatar" src="{% static 'landing/images/feedback/feedback_polina.jpg' %}" alt="Feedback avatar">
+                                </div>
+                                <div class="feedback-content">
+                                    <h5>
+                                        Полина
+                                        <span>
+                                            (студия 33м<sup>2</sup>)
+                                        </span>
+                                    </h5>
+                                    <p>Я много раз пыталась сама, но только с Диной мы наконец навели порядок на кухне</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="even-columns even-columns-context-right">
+                        <div class="column why-us-image why-us-image-layout">
+                            <img src="{% static 'landing/images/details.jpg' %}" alt="">
+                            <div class="border-images">
+                                <img class="rounded-images" src="{% static 'landing/images/details-corner-1.png' %}" alt="">
+                                <img class="rounded-images" src="{% static 'landing/images/details-corner-2.png' %}" alt="">
+                                <img class="rounded-images" src="{% static 'landing/images/details-5.webp' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="column why-us-context why-us-context-layout">
+                            <div>
+                                <h3>Эстетика даже в шкафу</h3>
+                                <p>
+                                    Подберём идеальные варианты, разместим вещи удобно и эстетично
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="even-columns">
+                        <div class="column why-us-image why-us-image-layout">
+                            <img src="{% static 'landing/images/takearest.jpg' %}" alt="">
+                            <div class="feedback-card feedback-card-center-absolute">
+                                <div>
+                                    <img class="feedback-avatar" src="{% static 'landing/images/feedback/our-happy-couple.jpeg' %}" alt="Feedback avatar">
+                                </div>
+                                <div class="feedback-content">
+                                    <h5>
+                                        Катя и Андрей
+                                        <span>
+                                            (1 к.кв. 42м<sup>2</sup>)
+                                        </span>
+                                    </h5>
+                                    <p>
+                                        Квартира как будто изменилась, все на своих местах и при этом всё удобно!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column why-us-context why-us-context-layout">
+                            <div>
+                                <h3>Ценим ваше время</h3>
+                                <p>
+                                    Мы с удовольствием сделаем это за вас: продумаем системы хранения и разложим вещи по местам
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="we-can-do we-can-do-layout" id="we-can-do">
+                <form method="post">
+                {% csrf_token %}
+                <h2>Услуги</h2>
+                <div class="services-details">
+                    {% for service in services %}
+                        <details {% if forloop.first %} class="border-radius-top-25" {% endif %}{% if forloop.last %} class="border-radius-bottom-25" {% endif %}>
+                            <summary><h3>{{service.name}}</h3></summary>
+
+                            <div class="services_text">
+                                {{service.desc |safe}}
+                                <label class="checkbox-btn" for="id_services_{{forloop.counter0}}">
+                                    <input type="checkbox" name="services" value="{{forloop.counter0}}" id="id_services_{{forloop.counter0}}">
+                                    <span>Добавить</span>
+                                </label>
+                            </div>
+                        </details>
+                    {% endfor %}
+                </div>
+                 <div class="contact-form-grid contact-form-layout" id="call-us">
+                    <div class="call-us-form call-us-form-layout">
+                        <p>
+                            Оставьте телефон и мы свяжемся с вами
+                            в любое удобное вам время.
+                        </p>
+                        <div style="padding-inline: 1rem">
+                            <div class="day-time-way-conatiner">
+                                <div>
+                                    {{form.day.label_tag}}
+                                    {{form.day}}
+                                </div>
+                                <div>
+                                    {{form.time.label_tag}}
+                                    {{form.time}}
+                                </div>
+                                <div>
+                                    {{form.way.label_tag}}
+                                    {{form.way}}
+                                </div>
+                            </div>
+                            <div class="contact-input">
+<!--                                {{form.contact.label}}-->
+                                {{form.contact}}
+                                <button class="button" type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="call-us-img-layout">
+                        <img src="{% static 'landing/images/callus.jpg' %}" alt="">
+                    </div>
+                </div>
+                </form>
+
+<!--                {% for field in form.services %}-->
+<!--                    {{ field }}-->
+<!--                {% endfor %}-->
+            </section>
+{% endblock content %}

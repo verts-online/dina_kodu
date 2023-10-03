@@ -1,0 +1,30 @@
+{% load static %}
+<hero class="hero-grid" id="hero">
+            <article class="hero-context">
+                <section class="hero-context-main">
+                    <h1 class="fs-primary-heading">Эстетика и порядок</h1>
+                    <p>мы знаем, как сделать ваш дом удобным, организованным и красивым</p>
+                    <a class="button" href="#call-us">Связаться</a>
+                </section>
+                <section class="feed-back">
+                    <p>Наши довольные клиенты</p>
+                    <div class="feed-back-avatars feed-back-layout">
+                        <img src="{% static 'landing/images/feedback/feedback_artemiy.jpg' %}" alt="клиент">
+                        <img src="{% static 'landing/images/feedback/feedback_olga.jpeg' %}" alt="клиент">
+                        <img src="{% static 'landing/images/feedback/feedback_viktor.jpg' %}" alt="клиент">
+                        <img src="{% static 'landing/images/feedback/feedback_kirill.jpg' %}" alt="клиент">
+                    </div>
+                </section>
+            </article>
+            <img class="hero-image" src="{% static 'landing/images/hero-section.jpg' %}" alt="">
+            <div class="we-work-with-style we-work-with-layout">
+                <span>Мы сотрудничаем</span>
+                <div class="companies-layout">
+                    <img src="{% static 'landing/images/companies-we-work-with/home4you.png' %}" alt="Логотоп компании home4you">
+                    <img src="{% static 'landing/images/companies-we-work-with/ikea.png' %}" alt="Логотоп компании ikea">
+                    <img src="{% static 'landing/images/companies-we-work-with/jysk.png' %}" alt="Логотоп компании jysk">
+                    <img src="{% static 'landing/images/companies-we-work-with/Kukupesa.png' %}" alt="Логотоп компании Kukupesa">
+                    <img src="{% static 'landing/images/companies-we-work-with/bauhaus.png' %}" alt="Логотоп компании Bauhaus">
+                </div>
+            </div>
+        </hero>

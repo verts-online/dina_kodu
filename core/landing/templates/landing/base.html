@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{% static 'landing/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&family=Pacifico&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'landing/images/favicon/favicon.ico' %}"/>
+</head>
+<body>
+    <div class="container">
+        <header class="primary-header">
+<!--            <div class="container">-->
+                <!-- NAVIGATION -->
+                {% include "landing/includes/nav.html" %}
+<!--            </div>-->
+        </header>
+        <!-- HERO SECTIONS -->
+        {% include "landing/includes/hero.html" %}
+
+        <!-- MAIN CONTENT -->
+        <main>
+        {% block content %}{% endblock content %}
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+        {% include "landing/includes/footer.html" %}
+        </footer>
+    </div>
+    <script src="{% static 'landing/js/index.js' %}"></script>
+</body>
+</html>
