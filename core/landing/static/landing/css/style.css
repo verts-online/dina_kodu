@@ -243,7 +243,7 @@ p, h1, h2, h3, h4, h5 {
     }
 }
 .we-work-with-layout {
-    /* margin-inline: 1em; */
+    margin-inline: 1rem;
     padding: 1em 1.25em;
     display: flex;
     align-items: center;
@@ -315,6 +315,7 @@ main > section > p {
     display: flex;
     flex: 1;
     max-width: 25rem;
+    min-height: 7rem;
 
 
 }
