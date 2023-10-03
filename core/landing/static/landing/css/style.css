@@ -925,6 +925,7 @@ details div {
         position: fixed;
         top: 1rem;
         right: 1rem;
+        width: 1rem;
         /*var(--size-400)*/
         z-index: 100;
         cursor: pointer;
