@@ -316,8 +316,6 @@ main > section > p {
     flex: 1;
     max-width: 25rem;
     min-height: 7rem;
-
-
 }
 .card:nth-child(1) {
     background-color: rgba(226, 227, 228, 0.75);
