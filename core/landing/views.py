@@ -9,12 +9,12 @@ def index(request):
     services = Service.objects.all()
     form = RequestCallForm()
     data = {"header": "Hello Django", "message": "Welcome to Python", 'services': services, 'form': form,
-            'title': 'Организатор пространства - Dina Kodu'}
+            'title': 'Организатор пространства - Vedana Kodu'}
 
     if request.method == 'POST':
         form = RequestCallForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Profile details updated.")
+            messages.success(request, "Заявка отправлена!")
 
     return render(request, "landing/index.html", context=data)
