@@ -16,5 +16,5 @@ def index(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Заявка отправлена!")
-
+        print('kek')
     return render(request, "landing/index.html", context=data)
