@@ -950,3 +950,9 @@ details div {
     }
 }
 
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
