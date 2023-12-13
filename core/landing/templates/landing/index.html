@@ -125,15 +125,15 @@
 
                             <div class="services_text">
                                 {{service.desc |safe}}
-                                <label class="checkbox-btn" for="id_services_{{forloop.counter0}}">
+<!--                                 <label class="checkbox-btn" for="id_services_{{forloop.counter0}}">
                                     <input type="checkbox" name="services" value="{{forloop.counter0}}" id="id_services_{{forloop.counter0}}">
                                     <span>Добавить</span>
-                                </label>
+                                </label> -->
                             </div>
                         </details>
                     {% endfor %}
                 </div>
-
+<!-- 
                  <div class="contact-form-grid contact-form-layout" id="call-us">
                     <div class="call-us-form call-us-form-layout">
                         <p>
@@ -165,7 +165,7 @@
                     <div class="call-us-img-layout">
                         <img src="{% static 'landing/images/callus.jpg' %}" alt="">
                     </div>
-                </div>
+                </div> -->
                 </form>
             </section>
 {% endblock content %}
