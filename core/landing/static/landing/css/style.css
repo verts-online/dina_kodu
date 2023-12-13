@@ -67,9 +67,7 @@ body {
     color: var(--text-black-color);
     /* min-width: 360px; */
 }
-main {
-    padding: 0 1em;
-}
+
 img,svg {
     width: 100%;
     display: block;
