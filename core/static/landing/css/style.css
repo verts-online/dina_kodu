@@ -68,7 +68,7 @@ body {
     /* min-width: 360px; */
 }
 main {
-    padding: 1em;
+    padding: 0 1em;
 }
 img,svg {
     width: 100%;
